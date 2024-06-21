@@ -32,6 +32,13 @@
             </dependency>
             <dependency>
                 <groupId>org.example</groupId>
+                <artifactId>module1</artifactId>
+                <version>${revision}</version>
+                <scope>test</scope>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
                 <artifactId>module2</artifactId>
                 <version>${revision}</version>
             </dependency>
