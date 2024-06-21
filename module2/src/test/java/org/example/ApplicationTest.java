@@ -1,14 +1,9 @@
 package org.example;
 
-import org.junit.Test;
+public class ApplicationTest extends AbstractGreetingTest {
 
-import static org.junit.Assert.*;
-
-public class ApplicationTest {
-
-    @Test
-    public void test() {
-        assertEquals("\"Hello world!\" from Application!", Application.SINGLETON.getGreeting());
+    @Override
+    IGreeting getGreetingImpl() {
+        return Application.SINGLETON;
     }
-
 }
