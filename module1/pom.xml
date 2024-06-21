@@ -13,5 +13,27 @@
 
     <artifactId>module1</artifactId>
 
+    <profiles>
+        <profile>
+            <id>module1Test</id>
+            <activation>
+                <property>
+                    <name>module1Test</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <skipTests>false</skipTests>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
